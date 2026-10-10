@@ -4,6 +4,8 @@ This project uses the ModelNet40 3D object dataset to classify objects into 40 c
 
 The input starts as a 3D mesh. Each mesh is converted into a 1024-point point cloud containing XYZ coordinates. The project then compares a simple PointNet-style model with a pretrained PointNeXt model to evaluate their classification performance.
 
+The project includes an interactive Streamlit dashboard where users can upload a 3D mesh, preview the object, and run model inference to predict its category.
+
 ## Dataset
 
 - Dataset: ModelNet40
@@ -198,3 +200,11 @@ flowchart TD
 ```
 python -m src.evaluate
 ```
+
+### Run the Dashboard
+
+```
+streamlit run api/app.py
+```
+
+![dashboard](./ref/dashboard.png)
